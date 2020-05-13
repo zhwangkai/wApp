@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import Swirl from "./templates/Swirl"
+import TempSwirl from "./templates/tempSwirl"
 
 class App extends Component {
     render() {
         return (
-            <Swirl />
+            <TempSwirl />
         )
     }
 }
