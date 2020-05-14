@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import TempSwirl from "./templates/tempSwirl"
+import Homepage from "./cps/homepaeg/homepage"
 
 class App extends Component {
     render() {
         return (
-            <TempSwirl />
+            <Homepage />
         )
     }
 }
