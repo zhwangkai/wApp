@@ -5,10 +5,7 @@ class TempSwirl extends Component {
 
     render() {
         return (
-            <div className='container'>
-            <p>Welcome!</p>
             <Swirl />
-            </div>
         )
     }
 }
