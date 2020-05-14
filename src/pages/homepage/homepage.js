@@ -6,8 +6,7 @@ class Homepage extends Component {
 
 	render() {
 		return (
-		<div className='cp cp-homepage-container'>
-		<div className='log'>WiSM</div>
+		<div className='pg pg-homepage-container'>
 		<TempSwirl />
 		</div>
 		)
