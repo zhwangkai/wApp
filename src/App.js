@@ -4,6 +4,7 @@ import Homepage from "./pages/homepage/homepage";
 import Blog from "./pages/blog/blog";
 import Tools from "./pages/tools/tools";
 import Menu from "./cps/menu/menu";
+import Nav from "./cps/nav/nav";
 
 import './App.scss';
 
@@ -11,7 +12,7 @@ class App extends Component {
     render() {
         return (
             <div className='app-container'>
-            <div className='log'>WiSM</div>
+            <Nav />
             <Menu />
             <Router>
                 <Switch>
