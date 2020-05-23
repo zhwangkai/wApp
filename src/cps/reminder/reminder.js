@@ -6,7 +6,7 @@ class Reminder extends Component {
 	render() {
 		return (
 		<div className='cp cp-reminder-container'>
-		<div>Tools</div>
+		<div></div>
 		</div>
 		)
 	}

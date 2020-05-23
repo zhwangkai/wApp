@@ -1,0 +1,14 @@
+.cp-nav-container {
+
+    .logo {
+        color: white;
+        margin: 15px 15px;
+        float: left;
+        font-size: 30px;
+        text-decoration:none;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
