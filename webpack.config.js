@@ -27,6 +27,17 @@ module.exports = {
                     { loader: "css-loader" },
                     { loader: "sass-loader" }
                 ]
+            },
+            // {
+            //     test: /\.svg$/,
+            //     loader: 'svg-sprite-loader',
+            //     include: path.resolve(__dirname, "src/assets/images/svg"),
+            // },
+            {
+                test: /\.(png|jpg|gif|svg)$/,
+                use: {
+                    loader: 'file-loader',
+                }
             }
         ]
     },

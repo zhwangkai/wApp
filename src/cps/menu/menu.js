@@ -1,49 +1,55 @@
 import React, { Component } from "react";
 import "./menu.scss";
+import List from '../../assets/images/svg/list.svg';
+import Crawler from '../../assets/images/svg/python.svg';
 
 class Menu extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            toggled: false
+            toggled: false,
         }
+        this.timeOutId = null;
 
-        this.handleToggle = this.handleToggle.bind(this);
-        this.handleBlur = this.handleBlur.bind(this);
-        this.handleClose = this.handleClose.bind(this);
+        this.onBlurHandler = this.onBlurHandler.bind(this);
+        this.onFocusHandler = this.onFocusHandler.bind(this);
+        this.onClickHandler = this.onClickHandler.bind(this);
     }
 
-    handleToggle() {
+    onClickHandler() {
         this.setState({
             toggled: !this.state.toggled
         })
     }
 
-    handleBlur() {
-    	window.alert("xixi");
-    	this.setState({
-    		toggled: false
-    	});
-    	window.alert("hah");
+    onBlurHandler() {
+        this.timeOutId = setTimeout(() => {
+            this.setState({
+                toggled: false
+            });
+        });
     }
 
-    handleClose() {
-    	this.setState({
-    		toggled:false
-    	})
+    onFocusHandler() {
+        clearTimeout(this.timeOutId);
     }
 
     render() {
         return (
-            <div className='cp cp-menu-container'>
-			<svg t="1589467129714" onClick={this.handleToggle} className="btn btn-menu icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4379" width="35" height="35"><path d="M128 256h64V192H128zM320 256h576V192H320zM128 544h64v-64H128zM320 544h576v-64H320zM128 832h64v-64H128zM320 832h576v-64H320z" fill="#ffffff" p-id="4380"></path></svg>
-			{this.state.toggled ? ( <div className='menu-box' onBlur={this.handleBlur}>
-				<a className='menu-link' href='/#/tools' onClick={this.handleClose}>Tools</a>
-				<a className='menu-link' href='/#/blog' onClick={this.handleClose}>Blogs</a>
-				<a className='menu-link' onClick={this.handleClose}>Blogs</a>
-				<a className='menu-link' onClick={this.handleClose}>Blogs</a>
-			</div>) : (<div></div>)}
-		</div>
+            <div className='cp cp-menu-container' 
+            onFocus={this.onFocusHandler} 
+            onBlur={this.onBlurHandler}
+            tabIndex="0">
+                <img className="btn btn-menu icon" onClick={this.onClickHandler} src={List} />
+            {this.state.toggled && ( <div className='menu-box' onClick={this.handleClose}>
+                <a className='menu-link tools' href='/#/tools'>Tools</a>
+                <a className='menu-link blog' href='/#/blog'>Blog</a>
+                <a className='menu-link reminder'>Reminder</a>
+                <a className='menu-link python'>
+                Crawler</a>
+            </div>)
+        } 
+        </div>
         )
     }
 }
