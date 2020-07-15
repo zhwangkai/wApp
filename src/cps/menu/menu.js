@@ -44,7 +44,7 @@ class Menu extends Component {
         return (
             <div className='cp cp-menu-container' 
             onFocus={this.onFocusHandler} 
-            //onBlur={this.onBlurHandler}
+            onBlur={this.onBlurHandler}
             tabIndex="0">
                 <img className="btn btn-menu icon" onClick={this.onClickHandler} src={List} />
             {this.state.toggled && ( <div className='menu-box'>
