@@ -25,7 +25,13 @@ module.exports = {
                         loader: "style-loader"
                     },
                     { loader: "css-loader" },
-                    { loader: "sass-loader" }
+                    { loader: "sass-loader" },
+                    {
+                        loader: "sass-resources-loader",
+                        options: {
+                            resources: './src/assets/style/common.scss'
+                        }
+                    }
                 ]
             },
             // {
