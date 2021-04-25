@@ -12,7 +12,7 @@ class Nav extends Component {
     render() {
         return (
             <div className='cp cp-nav-container'>
-            <a className='logo' href='/'>WiSM</a>
+            <a className='logo' href='/'>WSM</a>
             <Menu />
             </div>
         )
