@@ -1,16 +1,20 @@
 body {
     margin: 0 0;
 
+    a, a:hover, a:focus, a:active {
+        text-decoration: none;
+        color: inherit;
+    }
+
     .app-container {
         .cp-container {
             background-color: white;
             height: calc(90vh - 30px);
-            width: calc(100% - 30px);
+            width: 100%;
             position: absolute;
-            border-radius: 10px;
-            opacity: 0.8;
+            //opacity: 0.8;
             top: 10vh;
-            left: 15px;
+            left: 0;
         }
     }
 }

@@ -1,0 +1,7 @@
+/node_modules
+publish
+README.md
+webpack.config.js
+**/.git
+**/.DS_Store
+**/node_modules

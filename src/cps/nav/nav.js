@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./nav.scss";
 import Menu from "../menu/menu";
+import {Link} from "react-router-dom";
 
 class Nav extends Component {
 
@@ -12,7 +13,9 @@ class Nav extends Component {
     render() {
         return (
             <div className='cp cp-nav-container'>
-            <a className='logo' href='/'>WSM</a>
+                <Link to="/" className='logo'>
+                    <div>WSM</div>
+                </Link>
             <Menu />
             </div>
         )
