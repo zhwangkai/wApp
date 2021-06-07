@@ -3,6 +3,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     entry: path.join(__dirname, 'src', 'index.js'),
+    // output: { path: __dirname + "/dist", filename: 'index.bundle.js' },
     output: { path: '~/Nginx/Nginx_Frontend/www', filename: 'index.bundle.js' },
     mode: process.env.NODE_ENV || 'development',
     module: {
@@ -46,6 +47,10 @@ module.exports = {
                 }
             }
         ]
+    },
+
+    devServer: {
+        historyApiFallback: true,
     },
 
     resolve: { modules: [path.resolve(__dirname, 'src'), 'node_modules'] },
